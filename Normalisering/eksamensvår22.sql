@@ -28,7 +28,7 @@
 
 -- Svar: 
 
-    Bilforsikring(fornavn, etternavn, gate, husnummer, postnummer, poststed, epost,
+    Person(fornavn, etternavn, gate, husnummer, postnummer, poststed, epost)
 
     Bil(forsikringsnummer, registreringsnummer, merke, årsmodell, nypris, forsikringstype)
 
