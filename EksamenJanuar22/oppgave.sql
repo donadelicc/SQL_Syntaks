@@ -1,9 +1,9 @@
 
 
 
---a) 
+--a) Skriv SQL-kode for å opprette tabellen Passering. Anta at Bil finnes, Få e
 
-create table passeringer(
+create table passering(
     passering_id int primary key,
     bil_id int references biler(bil_id),
     dato date,
