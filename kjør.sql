@@ -35,7 +35,7 @@ where regnr=AA10000
 order by date limit(1) desc;
 
 --h)
-select passering.regnr count(*) as Uregistrert
+select count(*) as Uregistrert
 from passering
 where regnr is null;
 
