@@ -1,1 +1,1 @@
--- Sql syntaks
+-- Sql syntaks kjør
