@@ -28,15 +28,50 @@
 
 -- Svar: 
 
-    Person(fornavn, etternavn, gate, husnummer, postnummer, poststed, epost)
+    Person(
+        forsikringsnummer PK,
+        postnummer FK,
+        navn,
+        gate,
+        husnummer,
+        epost,
+    )
 
-    Bil(forsikringsnummer, registreringsnummer, merke, årsmodell, nypris, forsikringstype)
+    Bil(
+        registreringsnummer PK,
+        forsikringsnummer FK,
+        merke,
+        årsmodell,
+        nypris,
+    )
 
-    Forsikring(forsikringsnummer, forsikringstype, forsikringspris, rabatt)
+    Post(
+        postnummer PK,
+        poststed
+    )
+
+    Forsikringsdekning(
+        forsikringstype PK,
+        forsikringsnummer FK,
+        registeringsnummer FK,
+        forsikringspris,
+        rabatt
+)
 
 -- d) Er tabllen på 3NF? Modifiser tabellen
 
--- Svar: Ja, den er på 3NF
+    -- REGLER: Ingen transitive avhengigheter --> e.g. A->B, B->C, A->C
+
+-- Svar: 
+
+    -- skriv tabellen over på 3NF:
+
+
+
+
+
+
+
 
 -- e) Er tabllen på BCNF? Modifiser tabellen
 
