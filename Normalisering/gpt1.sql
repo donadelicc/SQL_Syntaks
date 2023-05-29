@@ -74,4 +74,9 @@ Svar:
     )
 
 
+--d) Er tabellen på 3NF?
+
+Svar: Ja
+
+
 
