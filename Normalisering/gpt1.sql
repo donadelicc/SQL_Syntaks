@@ -56,7 +56,6 @@ Svar:
         Forfatter (PK),
         Tittel (PK),
         Utgivelsesår (PK),
-        Sjanger,
     )
 
     Sjanger(
@@ -74,9 +73,44 @@ Svar:
     )
 
 
+
 --d) Er tabellen på 3NF?
 
-Svar: Ja
+Svar: 
+    Nei, det er transitive avhengigheter mellom lagersted og lagerhylle,
+    Lager derfor en ny tabell kalt Hylle:
+
+    Bokhandel(
+        Forfatter (PK),
+        Tittel (PK),
+        Utgivelsesår (PK),
+    )
+
+    Sjanger(
+        Forfatter (PK),
+        Tittel (PK),
+        Sjanger,
+    )
+
+    BokLager(
+        Forfatter (PK),
+        Tittel (PK),
+        Utgivelsesår (PK),
+        Lagersted (FK),
+        Lagerhylle (FK)
+    )
+
+    Lager (
+        Lagersted(PK)
+    )
+
+    Hylle(
+        Lagersted (PK, FK),
+        Hylle_Nummer (PK),
+    )
+
+
+
 
 
 
