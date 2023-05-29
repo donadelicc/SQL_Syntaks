@@ -76,7 +76,7 @@ Person(
     postnummer,
     poststed,
     adresse,
-    fordypningsnavn   
+    fordypningsnavn (FK)
 )
 
 Telefon(
@@ -87,7 +87,7 @@ Telefon(
 )
 
 Skole(
-    fordypningskode (FK),
+    fordypningskode (PK),
     fordypningsnavn
 )
 
